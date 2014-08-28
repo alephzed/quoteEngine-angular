@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>My quotes</h2>
+
+  <!-- quotes input -->
+  <form role="form">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="formTodoText" ng-model-instant placeholder="Enter a symbol" class="form-control">
+        <span class="input-group-btn">
+            <button  class="btn btn-primary" ng-click="getQuote(formTodoText)">Add</button>
+        </span>
+      </div>
+    </div>
+  </form>
+
+  <!-- quotes list -->
+
+      <ul class="list-unstyled">
+       <li ng-repeat="todo in quotes">
+          <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>  {{todo.symbol}} {{todo.last}}
+
+        </li>
+      </ul
+          
+
+</div>
